@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astiera - A Book Exhibition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes rainbow-text {
+            0% { color: #ff00de; text-shadow: 0 0 5px #ff00de; }
+            16% { color: #ff0000; text-shadow: 0 0 5px #ff0000; }
+            33% { color: #ffb700; text-shadow: 0 0 5px #ffb700; }
+            50% { color: #00ff00; text-shadow: 0 0 5px #00ff00; }
+            67% { color: #0000ff; text-shadow: 0 0 5px #0000ff; }
+            84% { color: #8a2be2; text-shadow: 0 0 5px #8a2be2; }
+            100% { color: #ff00de; text-shadow: 0 0 5px #ff00de; }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkduster', 'Kristen ITC', cursive;
+            background-color: #000;
+            color: #0f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2322c55e' fill-opacity='0.1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .container {
+            border: 3px solid #f0f;
+            box-shadow: 0 0 20px #f0f, inset 0 0 20px #f0f;
+            padding: 2rem;
+            margin: 2rem;
+            background: rgba(10, 0, 10, 0.5);
+            backdrop-filter: blur(2px);
+            max-width: 800px;
+            width: 90vw;
+            text-align: center;
+        }
+
+        .title {
+            animation: rainbow-text 3s linear infinite;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .blinking-text {
+            animation: blink 1s linear infinite;
+            font-size: 1.5rem;
+            color: #ff0;
+        }
+        
+        .spinner {
+            display: inline-block;
+            animation: spin 2s linear infinite;
+            font-size: 2rem;
+        }
+        
+        .event-details li {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            word-wrap: break-word;
+        }
+
+        .event-details strong {
+            color: #0ff;
+        }
+        
+        .fake-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 1rem;
+            border: 2px solid #0f0;
+            background: linear-gradient(45deg, #f0f, #0ff);
+            color: #000;
+            font-weight: bold;
+            font-size: 1.3rem;
+            box-shadow: 0 0 10px #fff;
+            transform: skew(-15deg);
+        }
+
+        marquee {
+            font-size: 1.5rem;
+            color: #f0f;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #333;
+            border: 2px dashed #0f0;
+        }
+
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <marquee behavior="scroll" direction="left">
+        ⚠️⚠️ WARNING: MAY CAUSE U TO ACTUALLY READ A BOOK 📚 FREE ENTRY 🤯 BE THERE OR BE A 4-SIDED 2D SHAPE ⚠️⚠️
+    </marquee>
+
+    <div class="container mt-4">
+        <h1 class="title">Astiera</h1>
+        <p class="blinking-text">the book fair your brain cells deserve</p>
+
+        <div class="my-6">
+            <span class="spinner">💀</span>
+            <p class="text-lg inline-block align-middle mx-4">
+                u think u can escape the lore?<br>
+                <strong>WRONG.</strong><br>
+                we trapped the words on paper. come see the ancient texts (from like, last year).
+            </p>
+            <span class="spinner">💀</span>
+        </div>
+
+        <ul class="event-details list-none p-0 text-left md:text-center">
+            <li><strong>WHEN:</strong> 11th & 12th Sept 2025 // 10:30 AM onwards (set a reminder, nerd)</li>
+            <li><strong>WHERE:</strong> B Block Ground Floor, RV University (don't get lost lol)</li>
+            <li><strong>WHY:</strong> idk, touch some paper instead of your phone for 5 mins. its good for u. probably.</li>
+        </ul>
+
+        <div class="fake-button mt-8">
+            CLICK HERE (it does nothing)
+        </div>
+    </div>
+
+    <marquee behavior="scroll" direction="right" class="mt-4">
+        💯💯 LITERALLY ME FR FR 👽 NO CAP THIS EVENT IS GONNA BE FIRE 🔥🔥 (METAPHORICALLY) 💯💯
+    </marquee>
+
+</body>
+</html>
+
